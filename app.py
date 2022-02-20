@@ -41,18 +41,18 @@ def handle_message(event):
     msg = event.message.text
     if msg in ['Hi', 'hi']:
         reply = 'Hi 87'
-    elif msg in ['你是', '你是?', '妳是', '妳是?']:
+    elif msg in ['你是', '你是?', '妳是', '妳是?', '你是誰', '妳是誰', '你是誰?', '妳是誰?']:
         reply = '我是誰很重要嗎?'
     elif msg in ['白痴', '白癡', '白吃', '87']:
         reply = '你才白痴!! 你全家都白痴!'
 
         sticker_message = StickerSendMessage(
-        package_id='1',
-        sticker_id='1'
+        package_id='446',
+        sticker_id='2019'
         )
         line_bot_api.reply_message(
         event.reply_token,
-        sticker_message)
+        sticker_message, TextSendMessage(text=reply))
 
     line_bot_api.reply_message(
         event.reply_token,
