@@ -35,6 +35,7 @@ def callback():
 
     return 'OK'
 
+line_bot_api.push_message('@291veboc', TextSendMessage(text='Hello!'))
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
