@@ -37,6 +37,14 @@ def callback():
 
 line_bot_api.broadcast(TextSendMessage(text='Hello!'))
 
+profile = line_bot_api.get_profile('U057857240e6f1a0f143fff44e4f73569') # 通過使用者id，獲取使用者資訊
+
+print(profile.display_name)
+print(profile.user_id)
+print(profile.picture_url)
+print(profile.status_message)
+
+
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
