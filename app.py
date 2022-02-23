@@ -35,7 +35,7 @@ def callback():
 
     return 'OK'
 
-line_bot_api.push_message('U057857240e6f1a0f143fff44e4f73569', TextSendMessage(text='Hello!'))
+line_bot_api.broadcast(TextSendMessage(text='Hello!'))
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
