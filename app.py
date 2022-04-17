@@ -1,3 +1,4 @@
+from json.tool import main
 from re import S
 from flask import Flask, request, abort
 
@@ -72,7 +73,7 @@ def handle_message(event):
 rich_menu_list = line_bot_api.get_rich_menu_list()
 for rich_menu in rich_menu_list:
     print(rich_menu.rich_menu_id)
-    
+
 # rich_menu_to_create = RichMenu(
 #     size=RichMenuSize(width=2500, height=843),
 #     selected=False,
@@ -86,3 +87,8 @@ for rich_menu in rich_menu_list:
 
 if __name__ == "__main__":
     app.run()
+
+# git add.
+# git commit -m "xx"
+# git push origin main
+# git push heroku main
