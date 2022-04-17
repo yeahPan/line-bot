@@ -69,7 +69,11 @@ def handle_message(event):
         event.reply_token,
         TextSendMessage(text=reply))
 
-# rich_menu
+# rich_menu_upload
+with open('D:\\Pan\996.PythonTest\line-bot\pic\1.jpg', 'rb') as f:
+    print(f)
+    #line_bot_api.set_rich_menu_image(<rich_menu_id>, <content_type>, f)
+
 rich_menu_list = line_bot_api.get_rich_menu_list()
 for rich_menu in rich_menu_list:
     print(rich_menu.rich_menu_id)
@@ -88,7 +92,8 @@ for rich_menu in rich_menu_list:
 if __name__ == "__main__":
     app.run()
 
-# git add.
+# git add .
 # git commit -m "xx"
 # git push origin main
+# heroku login
 # git push heroku main
