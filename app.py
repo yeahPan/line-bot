@@ -4,6 +4,9 @@ from flask import Flask, request, abort
 from linebot import (
     LineBotApi, WebhookHandler
 )
+
+from linebot.exceptions import LineBotApiError
+
 from linebot.exceptions import (
     InvalidSignatureError
 )
@@ -65,6 +68,21 @@ def handle_message(event):
         event.reply_token,
         TextSendMessage(text=reply))
 
+# rich_menu
+rich_menu_list = line_bot_api.get_rich_menu_list()
+for rich_menu in rich_menu_list:
+    print(rich_menu.rich_menu_id)
+    
+# rich_menu_to_create = RichMenu(
+#     size=RichMenuSize(width=2500, height=843),
+#     selected=False,
+#     name="Nice richmenu",
+#     chat_bar_text="Tap here",
+#     areas=[RichMenuArea(
+#         bounds=RichMenuBounds(x=0, y=0, width=2500, height=843),
+#         action=URIAction(label='Go to line.me', uri='https://line.me'))]
+# )
+# rich_menu_id = line_bot_api.create_rich_menu(rich_menu=rich_menu_to_create)
 
 if __name__ == "__main__":
     app.run()
