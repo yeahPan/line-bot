@@ -39,7 +39,7 @@ def callback():
 
     return 'OK'
 
-line_bot_api.broadcast(TextSendMessage(text='Hello!'))
+#line_bot_api.broadcast(TextSendMessage(text='Hello!'))
 
 profile = line_bot_api.get_profile('U057857240e6f1a0f143fff44e4f73569') # 通過使用者id，獲取使用者資訊
 
@@ -69,25 +69,23 @@ def handle_message(event):
         event.reply_token,
         TextSendMessage(text=reply))
 
+# rich_menu_created
+# rich_menu_to_create = RichMenu(
+#     size = RichMenuSize(width=2500, height=843),
+#     selected = False,
+#     name = "Nice richmenu",
+#     chat_bar_text = "Tap here",
+#     areas = [RichMenuArea(
+#         bounds = RichMenuBounds(x=0, y=0, width=2500, height=843),
+#         action = URIAction(label='Go to line.me', uri='https://line.me'))]
+# )
+# rich_menu_id = line_bot_api.create_rich_menu(rich_menu=rich_menu_to_create)
+
 # rich_menu_upload
 with open('D:\\Pan\996.PythonTest\line-bot\pic\1.jpg', 'rb') as f:
     print(f)
     #line_bot_api.set_rich_menu_image(<rich_menu_id>, <content_type>, f)
 
-rich_menu_list = line_bot_api.get_rich_menu_list()
-for rich_menu in rich_menu_list:
-    print(rich_menu.rich_menu_id)
-
-# rich_menu_to_create = RichMenu(
-#     size=RichMenuSize(width=2500, height=843),
-#     selected=False,
-#     name="Nice richmenu",
-#     chat_bar_text="Tap here",
-#     areas=[RichMenuArea(
-#         bounds=RichMenuBounds(x=0, y=0, width=2500, height=843),
-#         action=URIAction(label='Go to line.me', uri='https://line.me'))]
-# )
-# rich_menu_id = line_bot_api.create_rich_menu(rich_menu=rich_menu_to_create)
 
 if __name__ == "__main__":
     app.run()
