@@ -104,3 +104,5 @@ rich_menu = line_bot_api.get_rich_menu('U057857240e6f1a0f143fff44e4f73569')
 # Upload rich menu image
 with open('D:\\Pan\996.PythonTest\line-bot\pic\1.jpg', 'rb') as f:
     line_bot_api.set_rich_menu_image('U057857240e6f1a0f143fff44e4f73569', 'image/jpeg', f)
+
+print('POST','https://api.line.me/v2/bot/user/all/richmenu/U057857240e6f1a0f143fff44e4f73569')
