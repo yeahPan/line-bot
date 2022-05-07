@@ -50,10 +50,10 @@ from linebot import LineBotApi, WebhookHandler
 
 line_bot_api = LineBotApi('o8eopUX9WeQUMKcG/OuI0H+hxKKYDJ5dxW92GID+64P0Q0NiXZyS0Ugq0FK1RlhgOhdZZmGVf9bfSPNhEBVdzozi8C+xp6P1DBZV9zoEUo25b0SfqC+WAWYDdTTmbz4vlvoWI/Lrz41+GZu0melU7QdB04t89/1O/w1cDnyilFU=')
 
-with open('D:/Pan/996.PythonTest/line-bot/pic/1.jpg', 'rb') as f:
+with open('D:/Pan/996.PythonTest/line-bot/pic/line-rich-menu-demo.jpg', 'rb') as f:
     line_bot_api.set_rich_menu_image('richmenu-7eaf3a31197ed4edbde60d8cd1b4a671', 'image/jpeg', f)
 
-
+#Set default rich menu
 import requests
 
 headers = {'Authorization':'Bearer o8eopUX9WeQUMKcG/OuI0H+hxKKYDJ5dxW92GID+64P0Q0NiXZyS0Ugq0FK1RlhgOhdZZmGVf9bfSPNhEBVdzozi8C+xp6P1DBZV9zoEUo25b0SfqC+WAWYDdTTmbz4vlvoWI/Lrz41+GZu0melU7QdB04t89/1O/w1cDnyilFU='}
