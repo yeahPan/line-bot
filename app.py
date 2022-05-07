@@ -82,9 +82,9 @@ def handle_message(event):
 # rich_menu_id = line_bot_api.create_rich_menu(rich_menu=rich_menu_to_create)
 
 # rich_menu_upload
-with open('D:\\Pan\996.PythonTest\line-bot\pic\1.jpg', 'rb') as f:
-    print(f)
-    #line_bot_api.set_rich_menu_image(<rich_menu_id>, <content_type>, f)
+# with open('D:\\Pan\996.PythonTest\line-bot\pic\1.jpg', 'rb') as f:
+#     print(f)
+#     #line_bot_api.set_rich_menu_image(<rich_menu_id>, <content_type>, f)
 
 
 if __name__ == "__main__":
@@ -95,3 +95,8 @@ if __name__ == "__main__":
 # git push origin main
 # heroku login
 # git push heroku main
+
+from linebot import LineBotApi
+from linebot.exceptions import LineBotApiError
+
+rich_menu_list = line_bot_api.get_rich_menu_list()
