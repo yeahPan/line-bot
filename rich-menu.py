@@ -5,7 +5,7 @@ headers = {'Authorization':'Bearer o8eopUX9WeQUMKcG/OuI0H+hxKKYDJ5dxW92GID+64P0Q
 
 body = {
     'size': {'width': 2500, 'height': 1686},   # 設定尺寸
-    'selected': 'false',                        # 預設是否顯示
+    'selected': 'true',                        # 預設是否顯示
     'name': 'Richmenu demo',                   # 選單名稱
     'chatBarText': 'Tap to open',            # 選單在 LINE 顯示的標題
     'areas':[                                  # 選單內容
