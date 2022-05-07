@@ -28,5 +28,5 @@ curl -v -X POST https://api.line.me/v2/bot/richmenu \
 }
 
 {
-  "richMenuId": "richmenu-88c05ef6921ae53f8b58a25f3a65faf7"
+  "richMenuId": "U057857240e6f1a0f143fff44e4f73569"
 }

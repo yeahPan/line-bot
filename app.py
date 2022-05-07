@@ -81,10 +81,6 @@ def handle_message(event):
 # )
 # rich_menu_id = line_bot_api.create_rich_menu(rich_menu=rich_menu_to_create)
 
-# rich_menu_upload
-# with open('D:\\Pan\996.PythonTest\line-bot\pic\1.jpg', 'rb') as f:
-#     print(f)
-#     #line_bot_api.set_rich_menu_image(<rich_menu_id>, <content_type>, f)
 
 
 if __name__ == "__main__":
@@ -100,3 +96,11 @@ from linebot import LineBotApi
 from linebot.exceptions import LineBotApiError
 
 rich_menu_list = line_bot_api.get_rich_menu_list()
+print(rich_menu_list)
+
+# Get rich-menu
+rich_menu = line_bot_api.get_rich_menu('U057857240e6f1a0f143fff44e4f73569')
+
+# Upload rich menu image
+with open('D:\\Pan\996.PythonTest\line-bot\pic\1.jpg', 'rb') as f:
+    line_bot_api.set_rich_menu_image('U057857240e6f1a0f143fff44e4f73569', 'image/jpeg', f)
